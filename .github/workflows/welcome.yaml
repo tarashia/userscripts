@@ -25,6 +25,10 @@ jobs:
               repo: context.repo.repo,
               labels: ['submission']
             });
+      - uses: actions/github-script@v7.0.1
+        with:
+          github-token: ${{secrets.GH_TOKEN}}
+          script: |
             github.rest.pulls.requestReviewers({
               owner: context.repo.owner,
               repo: context.repo.repo,
