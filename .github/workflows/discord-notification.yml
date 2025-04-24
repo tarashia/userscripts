@@ -1,0 +1,21 @@
+name: PR Notification
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Discord notification
+        uses: stegzilla/discord-notify@v4
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          title: "New Pull Request Opened"
+          message: |
+            <@172001041305436161> <@684854397871849482> A new pull request has been opened!
+            **${{ github.event.pull_request.title }}**
+            **Creator:** ${{ github.event.pull_request.user.login }}
+            [View PR](${{ github.event.pull_request.html_url }})
+          username: GitHub PR Notifier
