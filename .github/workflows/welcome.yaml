@@ -13,19 +13,19 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             const msg = `👋 Thanks for your userscript submission! A maintainer will review it soon.`;
-            await github.issues.createComment({
+            github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: msg
             });
-            await github.issues.addLabels({
+            github.rest.issues.addLabels({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               labels: ['submission']
             });
-            await github.pulls.requestReviewers({
+            github.rest.pulls.requestReviewers({
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: context.issue.number,
