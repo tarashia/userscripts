@@ -32,7 +32,7 @@ Thank you for your interest in contributing userscripts to our project! We welco
 ## License
 
 By contributing, you agree that your contributions will be licensed under the MIT License.  
-This allows us to edit, review, and distribute your scripts as part of our mod repository.
+This allows us to edit, review, and distribute your scripts as part of our userscript repository.
 
 ## Questions or Help
 
