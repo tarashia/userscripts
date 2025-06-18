@@ -16,6 +16,8 @@
 - If they are in the Shelter, they have NO OT.
 */
 
+/* If you find errors in the code, you can use github to report them OR you can use the forum thread on PFQ in the guides category dedicated to this script. [https://pfq.link/~-B06] */
+
 (function () {
     "use strict";
     // ---------------------------------------------------------------------------------------------------- //
